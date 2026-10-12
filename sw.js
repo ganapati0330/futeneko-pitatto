@@ -1,5 +1,5 @@
 // フテ猫 ピタッとパズル Service Worker
-const CACHE = 'futeneko-pitatto-v5';
+const CACHE = 'futeneko-pitatto-v8';
 const FILES = ['./', './index.html'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES.map(u => new Request(u, { cache: 'reload' })))));
